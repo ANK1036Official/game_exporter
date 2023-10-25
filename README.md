@@ -21,6 +21,7 @@ python3 main.py -d ./some_game/ -o decrypt --type rpgmakermv/electron
 
 - [x] RPGMaker MV
 - [x] Electron based games
+- [ ] RenPy
 - [ ] Unity
 - [ ] Unreal Engine 3
 - [ ] Unreal Engine 4
