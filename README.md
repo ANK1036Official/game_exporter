@@ -33,6 +33,7 @@ python3 main.py -d ./some_game/ -o decrypt --type rpgmakermv/electron
 - Add support for Unity games
 - Add support for Unreal Engine (versions 3, 4, 5)
 - Add support for Wolf RPG
+- Add support for RenPy
 - (???)
 
 ## Acknowledgments
