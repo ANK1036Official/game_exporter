@@ -19,7 +19,7 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
-python3 main.py -d ./some_game/ -o decrypt --type rpgmakermv/electron
+python3 main.py -d ./some_game/ -o decrypt --type type_here
 ```
 
 ## Supported Game Types
