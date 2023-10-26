@@ -7,8 +7,13 @@
 Instructions for how to install the tool.
 
 ```bash
+# First install asar
+npm install -g asar
+# Then download the repo.
 git clone https://github.com/yourusername/game_exporter.git
 cd game_exporter
+# Lastly, install the requirements.txt dependencies
+pip install -r requirements.txt
 ```
 
 ## Usage
