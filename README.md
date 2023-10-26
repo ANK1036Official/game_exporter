@@ -30,7 +30,7 @@ python3 main.py -d ./some_game/ -o decrypt --type type_here
 - [x] RPGMaker MV
 - [x] Electron based games
 - [x] RenPy
-- [ ] Unity
+- [x] Unity
 - [ ] Unreal Engine 3
 - [ ] Unreal Engine 4
 - [ ] Unreal Engine 5
@@ -38,7 +38,6 @@ python3 main.py -d ./some_game/ -o decrypt --type type_here
 
 ## Roadmap
 
-- Add support for Unity games
 - Add support for Unreal Engine (versions 3, 4, 5)
 - Add support for Wolf RPG
 - (???)
