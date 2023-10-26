@@ -44,6 +44,7 @@ python3 main.py -d ./some_game/ -o decrypt --type type_here
 - Add support for Unreal Engine (versions 3, 4, 5)
 - Add support for Wolf RPG
 - (???)
+- Add Windows support.
 
 ## Acknowledgments
 
