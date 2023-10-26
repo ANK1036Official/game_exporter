@@ -2,6 +2,9 @@
 ## Introduction
 `game_exporter` is a game decryption tool designed for extracting assets such as images, code, sound, and more from various common game types.
 
+Currently, this is `Linux only`, but there are future plans to add Windows support.
+
+
 ## Installation
 Instructions for how to install the tool.
 
