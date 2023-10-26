@@ -4,19 +4,39 @@ import json
 import glob
 import subprocess
 import shutil
-
+import struct
 # Dependency check
 
 def check_dependencies():
     if shutil.which('asar') is None:
         print("Error: 'asar' binary not found. Please install it and add to your PATH.")
         exit(1)
+    elif shutil.which('unrpa') is None:
+        print("Error: 'unrpa' binary not found. Please install it and add to your PATH.")
+        exit(1)
     else:
         if debug_mode:
-            print("'asar' binary found.")
+            print("'asar' and 'unrpa' binaries found.")
 
-check_dependencies()
+# RenPy
 
+def discover_rpa(directory):
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file.endswith(".rpa"):
+                rpa_file_path = os.path.join(root, file)
+                extract_rpa_with_unrpa(rpa_file_path)
+
+def extract_rpa_with_unrpa(rpa_file_path):
+    output_dir = os.path.join(os.path.dirname(rpa_file_path), 'out')
+
+    try:
+        subprocess.run(["unrpa", "--mkdir", "-p", output_dir, rpa_file_path], check=True)
+        print(f"Successfully extracted {rpa_file_path} to {output_dir}")
+        return True
+    except subprocess.CalledProcessError:
+        print(f"Failed to extract {rpa_file_path}")
+        return False
 
 # Electron based game
 
@@ -257,7 +277,7 @@ def parse_args():
     parser.add_argument('-d', '--directory', type=str, required=True, help='Directory containing the game files.')
     parser.add_argument('-o', '--operation', type=str, choices=['encrypt', 'decrypt'], required=True, help='Operation to perform: encrypt or decrypt.')
     parser.add_argument('--debug', help='Enable debug output.', action='store_true')
-    parser.add_argument('--type', help='Specify the type of RPG Maker or other.', required=True, choices=['rpgmakermv', 'electron'])
+    parser.add_argument('--type', help='Specify the type of RPG Maker or other.', required=True, choices=['rpgmakermv', 'electron', 'renpy'])
     return parser.parse_args()
 
 
@@ -267,6 +287,8 @@ if __name__ == "__main__":
     operation = args.operation
     debug_mode = args.debug
     decrypter_type = args.type
+
+    check_dependencies()
     
     if debug_mode:
         print(f"Arguments parsed. Directory: {directory}, Operation: {operation}, Type: {decrypter_type}")
@@ -292,3 +314,5 @@ if __name__ == "__main__":
                 print("System.json not found. Exiting.")
     elif decrypter_type == 'electron':
         discover_asar(args.directory)
+    elif decrypter_type == 'renpy':
+        discover_rpa(args.directory)
