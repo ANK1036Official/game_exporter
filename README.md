@@ -19,6 +19,10 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
+# Check the help
+python3 main.py --help
+
+# Do the thing
 python3 main.py -d ./some_game/ -o decrypt --type type_here
 ```
 
