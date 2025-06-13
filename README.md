@@ -37,7 +37,7 @@ python3 game_exporter.py -d ./some_game/ -o decrypt --type type_here
 - [x] Unity
 - [x] Unreal Engine 3
 - [x] Unreal Engine 4
-- [x] Unreal Engine 5
+- [ ] Unreal Engine 5
 - [x] Wolf RPG
 - [x] Godot
 - [x] Construct 2/3
@@ -57,7 +57,7 @@ The RPGMaker code in this project is based off of Petschko's RPG Maker Decryptio
 
 2. **rvpacker** (for RPGMaker VX/VX Ace) - Install with Ruby: `gem install rvpacker`
 
-3. **umodel** (for Unreal Engine 3/4/5) - Manual download from: https://www.gildor.org/en/projects/umodel
+3. **umodel** (for Unreal Engine 3/4) - Manual download from: https://www.gildor.org/en/projects/umodel
 
 4. **arc_unpacker** (for Wolf RPG) - Build from source:
    ```bash
