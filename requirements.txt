@@ -1,1 +1,4 @@
+chardet
 unrpa
+UnityPy
+Pillow
