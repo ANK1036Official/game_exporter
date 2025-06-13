@@ -2,6 +2,12 @@
 `game_exporter` is a game decryption tool designed for extracting assets such as images, code, sound, and more from various common game types.
 Currently, this is `Linux only`, but there are future plans to add Windows support.
 
+Note: If the 2025 version does not work properly, please downgrade to the 0.0.3 release, which only supports:
+RPGMaker MV
+Electron based games
+RenPy
+Unity
+
 ## Installation
 Instructions for how to install the tool.
 ```bash
